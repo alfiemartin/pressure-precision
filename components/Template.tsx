@@ -13,7 +13,7 @@ const PageTemplate = ({ children }: PageTemplateProps) => {
         <title>Midlands Pressure Washing - Pressure Precision</title>
       </Head>
       <Header />
-      <div className='main-content pt-[76px] h-100-accom font-poppins px-2 sm:px-0'>{children}</div>
+      <div className='main-content pt-[85px] h-100-accom font-poppins px-0'>{children}</div>
     </>
   );
 };

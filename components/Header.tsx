@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import siteLogo from "../public/logo.png";
 
 export const Header = () => {
@@ -12,22 +13,22 @@ export const Header = () => {
         </div>
         <ul className='flex justify-end gap-8 pr-8 font-semibold text-black'>
           <li>
-            <a>Home</a>
+            <Link href='/'>Home</Link>
           </li>
           <li>
-            <a>About</a>
+            <Link href='/about'>About</Link>
           </li>
           <li>
-            <a>Services</a>
+            <Link href='/services'>Services</Link>
           </li>
           <li>
-            <a>Gallery</a>
+            <Link href='/gallery'>Gallery</Link>
           </li>
           <li>
-            <a>Areas Covered</a>
+            <Link href='/areas-covered'>Areas Covered</Link>
           </li>
           <li>
-            <a>Contact</a>
+            <Link href='/contact'>Contact</Link>
           </li>
         </ul>
       </nav>
