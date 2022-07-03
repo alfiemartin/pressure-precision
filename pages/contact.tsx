@@ -1,7 +1,8 @@
 import React from "react";
+import PageHeader from "../components/PageHeader";
 
 const contact = () => {
-  return <div>contact</div>;
+  return <PageHeader title='Contact' />;
 };
 
 export default contact;

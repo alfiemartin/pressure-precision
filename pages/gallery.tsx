@@ -1,7 +1,8 @@
 import React from "react";
+import PageHeader from "../components/PageHeader";
 
 const gallery = () => {
-  return <div>gallery</div>;
+  return <PageHeader title='Gallery' />;
 };
 
 export default gallery;

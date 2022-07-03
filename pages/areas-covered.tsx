@@ -1,7 +1,8 @@
 import React from "react";
+import PageHeader from "../components/PageHeader";
 
 const areasCovered = () => {
-  return <div>areas covered</div>;
+  return <PageHeader title='Areas Covered' />;
 };
 
 export default areasCovered;
