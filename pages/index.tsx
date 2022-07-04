@@ -12,7 +12,13 @@ import wallsAndFences from "../public/homepagebanner2.jpeg";
 import driveways from "../public/homepagebanner.jpeg";
 import howItWorks from "../public/howitsworks.jpeg";
 import drivewaysBlock from "../public/driveway.jpeg";
+import patiosBlock from "../public/patio.jpeg";
+import soffitsBlock from "../public/soffit.jpeg";
+import wallsBlock from "../public/wall-1.jpeg";
+import sandBlock from "../public/dress.jpeg";
+import quoteBlock from "../public/free-1.jpeg";
 import Image from "next/image";
+import GridBlock from "../components/GridBlock";
 
 const slidesData: Array<SlideCtaProps> = [
   {
@@ -68,19 +74,17 @@ const Home: NextPage = () => {
           </p>
         </CtaContainer>
       </section>
-      <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
-        <div className='text-[0px]'>
-          <Image src={drivewaysBlock} layout='responsive' alt='driveways' />
-        </div>
-        <div className='text-[0px]'>
-          <Image src={drivewaysBlock} layout='responsive' alt='driveways' />
-        </div>
-        <div className='text-[0px]'>
-          <Image src={drivewaysBlock} layout='responsive' alt='driveways' />
-        </div>
-        <div className='text-[0px]'>
-          <Image src={drivewaysBlock} layout='responsive' alt='driveways' />
-        </div>
+      <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 text-[0px]'>
+        {[
+          { image: drivewaysBlock },
+          { image: patiosBlock },
+          { image: soffitsBlock },
+          { image: wallsBlock },
+          { image: sandBlock },
+          { image: quoteBlock },
+        ].map(({ image }, i) => {
+          return <GridBlock key={i} image={image} title={"hey"} text={"ss"} />;
+        })}
       </section>
     </div>
   );
