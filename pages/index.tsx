@@ -68,18 +68,18 @@ const Home: NextPage = () => {
           </p>
         </CtaContainer>
       </section>
-      <section className='grid grid-cols-1 sm:grid-cols-2'>
-        <div>
-          <Image src={drivewaysBlock} alt='driveways' />
+      <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
+        <div className='text-[0px]'>
+          <Image src={drivewaysBlock} layout='responsive' alt='driveways' />
         </div>
-        <div>
-          <Image src={drivewaysBlock} alt='driveways' />
+        <div className='text-[0px]'>
+          <Image src={drivewaysBlock} layout='responsive' alt='driveways' />
         </div>
-        <div>
-          <Image src={drivewaysBlock} alt='driveways' />
+        <div className='text-[0px]'>
+          <Image src={drivewaysBlock} layout='responsive' alt='driveways' />
         </div>
-        <div>
-          <Image src={drivewaysBlock} alt='driveways' />
+        <div className='text-[0px]'>
+          <Image src={drivewaysBlock} layout='responsive' alt='driveways' />
         </div>
       </section>
     </div>

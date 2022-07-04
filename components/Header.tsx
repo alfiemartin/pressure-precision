@@ -9,15 +9,13 @@ export const Header = () => {
   return (
     <header className='w-full dark:text-white'>
       <nav className={`flex justify-between items-center bg-white fixed w-full z-10 shadow-md p-2`}>
-        <div className='flex items-center'>
-          <picture className='w-[280px] relative'>
-            <Link href='/' passHref>
-              <a>
-                <Image src={siteLogo} layout='responsive' quality={100} alt='Pressure Precision' />
-              </a>
-            </Link>
-          </picture>
-        </div>
+        <picture className='w-[280px] relative'>
+          <Link href='/' passHref>
+            <a>
+              <Image src={siteLogo} layout='responsive' quality={100} alt='Pressure Precision' />
+            </a>
+          </Link>
+        </picture>
 
         <div className='flex justify-end gap-8 font-semibold text-black'>
           <MenuList className='hidden nav-close:flex' />

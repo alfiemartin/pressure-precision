@@ -1,5 +1,5 @@
 import React from "react";
-import { slide as Menu } from "react-burger-menu";
+import { stack as Menu } from "react-burger-menu";
 import MenuList from "./MenuList";
 
 const BurgerMenu = () => {
@@ -13,7 +13,7 @@ const BurgerMenu = () => {
         burgerButtonClassName='w-8 h-8 bg-none relative'
         burgerBarClassName='bg-brand-blue hover:bg-black'
       >
-        <MenuList className='flex-col text-right pr-0' />
+        <MenuList className='flex-col pr-0' />
       </Menu>
     </div>
   );
