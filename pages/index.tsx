@@ -40,7 +40,6 @@ const Home: NextPage = () => {
         loop
         autoplay
         pagination={{ clickable: true }}
-        navigation
         modules={[Autoplay, Pagination, Navigation]}
       >
         {slidesData.map((slideData, i) => (
@@ -50,16 +49,8 @@ const Home: NextPage = () => {
         ))}
       </Swiper>
       <section className='h-[350px] flex justify-center items-center relative'>
-        <CtaContainer className='z-10 text-white'>
-          <h1 className='text-5xl'>HOW IT WORKS</h1>
-          <p>
-            With the change in weather around the corner get your driveway, patio, decking or walls
-            looking like new. Using the latest high pressure jets and surface cleaners I can help
-            restore it to its former glory.
-          </p>
-        </CtaContainer>
         <Image
-          className='absolute inset-0'
+          className='inset-0'
           src={howItWorks}
           priority
           alt='how it works'
@@ -68,11 +59,16 @@ const Home: NextPage = () => {
           objectPosition='left'
         />
         <div className='bg-brand-blue absolute inset-0 opacity-70'></div>
+        <CtaContainer className='text-white absolute'>
+          <h1 className='text-5xl'>HOW IT WORKS</h1>
+          <p>
+            With the change in weather around the corner get your driveway, patio, decking or walls
+            looking like new. Using the latest high pressure jets and surface cleaners I can help
+            restore it to its former glory.
+          </p>
+        </CtaContainer>
       </section>
-      <section
-        className='grid'
-        style={{ gridTemplateColumns: "repeat(auto-fill, minmax(100px, 1fr)" }}
-      >
+      <section className='grid grid-cols-1 sm:grid-cols-2'>
         <div>
           <Image src={drivewaysBlock} alt='driveways' />
         </div>
