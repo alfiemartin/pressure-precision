@@ -3,5 +3,13 @@
 @tailwind utilities;
 
 .btn-pill {
-    @apply px-4 py-2 bg-brand-blue text-white w-fit rounded-full
+    @apply px-4 py-2 bg-brand-blue text-white w-fit rounded-full;
+}
+
+.swiper-pagination-bullet-active {
+    @apply bg-brand-blue !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    @apply text-brand-blue !important;
 }

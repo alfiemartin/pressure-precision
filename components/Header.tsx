@@ -7,8 +7,12 @@ export const Header = () => {
     <header className='w-full dark:text-white'>
       <nav className={`flex justify-between items-center bg-white fixed w-full z-10 shadow-md p-2`}>
         <div className='flex items-center'>
-          <picture className='w-[280px] mr-3'>
-            <Image src={siteLogo} layout='responsive' quality={30} alt='Site Logo' />
+          <picture className='w-[280px] mr-3 relative'>
+            <Link href='/' passHref>
+              <a>
+                <Image src={siteLogo} layout='responsive' quality={100} alt='Pressure Precision' />
+              </a>
+            </Link>
           </picture>
         </div>
         <ul className='flex justify-end gap-8 pr-8 font-semibold text-black'>

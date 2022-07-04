@@ -8,18 +8,26 @@ export interface SlideCtaProps {
   title: string;
   bodyText: string;
   ctaText: string;
+  priority?: boolean;
 }
 
-const SlideCta = ({ bodyText, ctaText, image, imageAlt, title }: SlideCtaProps) => {
+const SlideCta = ({ bodyText, ctaText, image, imageAlt, title, priority }: SlideCtaProps) => {
   return (
     <section className='relative'>
       <div className='w-full h-[450px] relative'>
-        <Image src={image} alt={imageAlt} layout='fill' objectFit='cover' objectPosition='left' />
+        <Image
+          priority={priority}
+          src={image}
+          alt={imageAlt}
+          layout='fill'
+          objectFit='cover'
+          objectPosition='left'
+        />
         <div className='absolute inset-0 w-full h-full bg-white opacity-75'></div>
         <CtaContainer className='absolute left-1/2 -translate-x-1/2 w-full h-full inset-0'>
-          <h1 className='text-brand-blue text-5xl'>{title}</h1>
+          <h1 className='text-brand-blue uppercase text-5xl'>{title}</h1>
           <p className='font-light'>{bodyText}</p>
-          <a className='btn-pill' href='/walls-and-fences'>
+          <a className='btn-pill uppercase text-sm font-bold shadow' href='/walls-and-fences'>
             {ctaText}
           </a>
         </CtaContainer>

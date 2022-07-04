@@ -1,7 +1,12 @@
 import type { NextPage } from "next";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper";
 import SlideCta, { SlideCtaProps } from "../components/SlideCta";
 import CtaContainer from "../components/CtaContainer";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import wallsAndFences from "../public/homepagebanner2.jpeg";
 import driveways from "../public/homepagebanner.jpeg";
@@ -31,10 +36,16 @@ const slidesData: Array<SlideCtaProps> = [
 const Home: NextPage = () => {
   return (
     <div>
-      <Swiper>
+      <Swiper
+        loop
+        autoplay
+        pagination={{ clickable: true }}
+        navigation
+        modules={[Autoplay, Pagination, Navigation]}
+      >
         {slidesData.map((slideData, i) => (
           <SwiperSlide key={i}>
-            <SlideCta {...slideData} />
+            <SlideCta {...slideData} priority={i === 0} />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -50,6 +61,7 @@ const Home: NextPage = () => {
         <Image
           className='absolute inset-0'
           src={howItWorks}
+          priority
           alt='how it works'
           layout='fill'
           objectFit='cover'
