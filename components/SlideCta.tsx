@@ -24,7 +24,7 @@ const SlideCta = ({ bodyText, ctaText, image, imageAlt, title, priority }: Slide
           objectPosition='left'
         />
         <div className='absolute inset-0 w-full h-full bg-white opacity-75'></div>
-        <CtaContainer className='absolute left-1/2 -translate-x-1/2 w-full h-full inset-0'>
+        <CtaContainer className='absolute left-1/2 -translate-x-1/2 w-full h-full '>
           <h1 className='text-brand-blue uppercase text-5xl'>{title}</h1>
           <p className='font-light'>{bodyText}</p>
           <a className='btn-pill uppercase text-sm font-bold shadow' href='/walls-and-fences'>

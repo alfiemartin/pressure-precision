@@ -19,6 +19,7 @@ import sandBlock from "../public/dress.jpeg";
 import quoteBlock from "../public/free-1.jpeg";
 import Image from "next/image";
 import GridBlock from "../components/GridBlock";
+import SocialsBar from "../components/SocialsBar";
 
 const slidesData: Array<SlideCtaProps> = [
   {
@@ -86,6 +87,7 @@ const Home: NextPage = () => {
           return <GridBlock key={i} image={image} title={"hey"} text={"ss"} />;
         })}
       </section>
+      <SocialsBar />
     </div>
   );
 };

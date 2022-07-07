@@ -1,9 +1,17 @@
 import React, { ReactNode } from "react";
 
-const CtaContainer = ({ children, className }: { children: ReactNode; className?: string }) => {
+interface CtaContainerProps {
+  children: ReactNode;
+  className?: string;
+  row?: boolean;
+}
+
+const CtaContainer = ({ children, className, row }: CtaContainerProps) => {
   return (
     <div
-      className={`text-center px-4 sm:px-8 md:max-w-[600px] flex flex-col gap-5 justify-center items-center ${className}`}
+      className={`text-center px-4 mx-auto sm:px-8 md:max-w-[600px] flex ${
+        !row && "flex-col"
+      } gap-5 justify-center items-center ${className}`}
     >
       {children}
     </div>

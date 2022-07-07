@@ -14,3 +14,11 @@
     @apply text-brand-blue !important;
 }
 
+.info-block:hover .info-block__content {
+    @apply opacity-70 !important;
+}
+
+.info-block:hover .info-block__expander {
+    @apply top-0 !important;
+}
+
