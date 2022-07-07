@@ -74,7 +74,7 @@ const Home: NextPage = () => {
           </p>
         </CtaContainer>
       </section>
-      <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 text-[0px]'>
+      <section className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 text-[0px]'>
         {[
           { image: drivewaysBlock },
           { image: patiosBlock },

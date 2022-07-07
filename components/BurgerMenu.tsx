@@ -7,13 +7,14 @@ const BurgerMenu = () => {
     <div className='nav-close:hidden'>
       <Menu
         right
-        overlayClassName='inset-0 top-[85px]'
+        overlayClassName='inset-0'
         menuClassName='bg-brand-blue p-4'
-        className='top-[85px]'
+        className='top-0'
+        crossClassName='z-1 bg-black'
         burgerButtonClassName='w-8 h-8 bg-none relative'
         burgerBarClassName='bg-brand-blue hover:bg-black'
       >
-        <MenuList className='flex-col pr-0' />
+        <MenuList className='flex-col mt-8 pr-0' />
       </Menu>
     </div>
   );
