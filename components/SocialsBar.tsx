@@ -5,25 +5,17 @@ import CtaContainer from "./CtaContainer";
 import facebookIcon from "../public/Facebook.svg";
 import tiktokIcon from "../public/TikTok.svg";
 import youtubeIcon from "../public/YouTube.svg";
-import phoneIcon from "../public/phone.svg";
-
-const SocialIcon = ({ image, imageAlt }: { image: StaticImageData; imageAlt: string }) => {
-  return (
-    <div className='transition-all duration-150 ease-out relative top-0 hover:top-1'>
-      <Image src={image} width={60} height={60} alt={imageAlt} />
-    </div>
-  );
-};
+import Link from "next/link";
+import SocialIcon from "./SocialIcon";
 
 const SocialsBar = () => {
   return (
     <CtaContainer className='py-16'>
       <h2 className='text-2xl mb-4'>FOLLOW ME ON SOCIAL MEDIA</h2>
       <div className='flex justify-center gap-16'>
-        <SocialIcon image={facebookIcon} imageAlt='Facebook' />
-        <SocialIcon image={tiktokIcon} imageAlt='TikTok' />
-        <SocialIcon image={youtubeIcon} imageAlt='Facebook' />
-        <SocialIcon image={phoneIcon} imageAlt='YouTube' />
+        <SocialIcon href="https://www.facebook.com/pressureprecision" image={facebookIcon} imageAlt='Facebook' />
+        <SocialIcon href="https://www.tiktok.com/@pressureprecision" image={tiktokIcon} imageAlt='TikTok' />
+        <SocialIcon href="https://www.youtube.com/channel/UCDbSMHf0T-tVrvBYrMBs6SA" image={youtubeIcon} imageAlt='YouTube' />
       </div>
     </CtaContainer>
   );

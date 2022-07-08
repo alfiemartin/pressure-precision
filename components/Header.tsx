@@ -10,7 +10,7 @@ import siteLogoMobile from "../public/logo--mobile.svg";
 export const Header = () => {
   return (
     <header className='w-full dark:text-white'>
-      <nav className={`flex justify-between items-center bg-white fixed w-full z-10 shadow-md p-2`}>
+      <nav className={`flex justify-between items-center bg-white fixed w-full z-50 shadow-md p-2`}>
         <picture className='w-[280px] hidden md:block'>
           <Link href='/' passHref>
             <a>
