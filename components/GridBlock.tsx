@@ -9,19 +9,19 @@ export interface GridBlockProps {
 
 const GridBlock = ({ image, text, title }: GridBlockProps) => {
   return (
-    <div className='info-block relative'>
+    <article className='info-block overflow-hidden relative'>
       <Image src={image} layout='responsive' alt='driveways' />
-      <div className='absolute inset-0 flex flex-col justify-end p-6 text-white'>
-        <h1 className='text-xl'>{title}</h1>
-        <div>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias quae vel dolorum
-            doloremque repellat at laudantium et ratione tempora sint!
+      <div className='info-block__overlay transition-all duration-300 opacity-0 inset-0 bg-brand-blue absolute text-4xl'></div>
+      <div className='info-block__text w-full transition-all duration-300 absolute flex top-[calc(100%-66px)] flex-col justify-end text-white'>
+        <div className="info-block__text-overlay transition-all duration-300 absolute inset-0 bg-brand-blue opacity-70"></div>
+        <div className="p-4 relative">
+          <h1 className='text-3xl mb-4'>{title}</h1>
+          <p className="text-lg">
+            {text}
           </p>
         </div>
       </div>
-      <div className='info-block__content absolute z-10 text-4xl'></div>
-    </div>
+    </article>
   );
 };
 
